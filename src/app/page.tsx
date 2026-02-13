@@ -1,65 +1,47 @@
-import Image from "next/image";
+/**
+ * 메인 페이지 — 모든 보고서 섹션 컴포넌트 조합
+ *
+ * 수정 포인트:
+ * - 섹션 순서 변경: 아래 컴포넌트 순서만 바꾸면 됨
+ * - 섹션 추가/삭제: import & JSX에서 추가/삭제
+ */
+import Header from "@/components/Header";
+import KpiStrip from "@/components/KpiStrip";
+import BrandCards from "@/components/BrandCards";
+import RiskOpportunity from "@/components/RiskOpportunity";
+import BrandKpiTable from "@/components/BrandKpiTable";
+import StrategicRecommendations from "@/components/StrategicRecommendations";
+import CeoMessage from "@/components/CeoMessage";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div className="report">
+      {/* 보고서 헤더 */}
+      <Header />
+
+      <div className="content">
+        {/* 전사 핵심 KPI */}
+        <KpiStrip />
+
+        {/* 브랜드별 핵심 실적 카드 */}
+        <BrandCards />
+
+        {/* 전사 리스크 & 기회 */}
+        <RiskOpportunity />
+
+        {/* 브랜드별 KPI 비교 테이블 */}
+        <BrandKpiTable />
+
+        {/* CEO 전략 제안 */}
+        <StrategicRecommendations />
+
+        {/* 경영진 핵심 메시지 */}
+        <CeoMessage />
+      </div>
+
+      {/* 푸터 */}
+      <Footer />
     </div>
   );
 }
