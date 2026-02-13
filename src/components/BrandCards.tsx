@@ -91,9 +91,7 @@ export default function BrandCards() {
             </div>
             <div className="metric-row">
               <span className="label">영업이익</span>
-              <span className="value down">
-                -764백만 (가방사입 적자 307백만 제외 시, 457백만 )
-              </span>
+              <span className="value down">-764백만</span>
             </div>
             <div className="metric-row">
               <span className="label">영업이익률</span>
@@ -110,6 +108,10 @@ export default function BrandCards() {
             <div className="metric-row">
               <span className="label">점당매출</span>
               <span className="value up">63백만 (113%)</span>
+            </div>
+            <div className="metric-row">
+              <span className="label">가방사입제외</span>
+              <span className="value down">영업적자 -457백만</span>
             </div>
           </div>
         </div>

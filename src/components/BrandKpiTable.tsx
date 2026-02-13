@@ -134,7 +134,7 @@ export default function BrandKpiTable() {
             <td>전사 합계</td>
             <td>80,058</td>
             <td>
-              <span className="badge badge-blue">110%</span>
+              <span className="badge badge-blue">108%</span>
             </td>
             <td>7,815</td>
             <td>9.8%</td>

@@ -11,7 +11,7 @@ export default function KpiStrip() {
       <div className="kpi-item">
         <div className="kpi-value">80,058</div>
         <div className="kpi-label">전사 실판매출 (백만원)</div>
-        <div className="kpi-change up">▲ YoY 110% · +7,402</div>
+        <div className="kpi-change up">▲ YoY 108% · +6,141</div>
       </div>
       <div className="kpi-item">
         <div className="kpi-value">7,815</div>
@@ -21,7 +21,7 @@ export default function KpiStrip() {
       <div className="kpi-item">
         <div className="kpi-value">3 / 5</div>
         <div className="kpi-label">흑자 브랜드</div>
-        <div className="kpi-change neutral">MLB · DISC · DUV 흑자</div>
+        <div className="kpi-change neutral">MLB, DX, DV 흑자</div>
       </div>
       <div className="kpi-item">
         <div className="kpi-value">
