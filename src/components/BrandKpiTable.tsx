@@ -8,7 +8,7 @@
  */
 export default function BrandKpiTable() {
   return (
-    <>
+    <div className="kpi-compare-print-break">
       <div className="section-title">
         <span className="icon">📋</span> 브랜드별 주요 KPI 비교
       </div>
@@ -148,6 +148,6 @@ export default function BrandKpiTable() {
           </tr>
         </tbody>
       </table>
-    </>
+    </div>
   );
 }

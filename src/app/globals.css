@@ -36,6 +36,10 @@
     max-width: 100%;
   }
   .page-break { page-break-before: always; }
+  .kpi-compare-print-break {
+    break-before: page;
+    page-break-before: always;
+  }
 }
 
 body {
