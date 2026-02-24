@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# F&F 2026.01 Report Webapp Handoff
 
-## Getting Started
+## 1) Project summary
+- Stack: Next.js 16, React 19, TypeScript
+- Local dev URL: `http://localhost:3000`
+- PDF/HTML export scripts:
+  - `node generate-pdf.js`
+  - `node generate-html.js`
 
-First, run the development server:
+## 2) Current finalized data reflected in UI
+- KPI table order:
+  - 전사 합계
+  - MLB
+  - MLB KIDS
+  - DISCOVERY
+  - DUVETICA
+  - S.TACCHINI
+- 전사 합계(현재 반영값):
+  - 직접이익률 `24.6%`
+  - 할인율 `17.2%`
+  - 25F 판매율 `45.0%`
+  - 신발재고(주) `57.5주`
+  - 자사몰이익률 `59.7%`
+- MLB 자사몰이익률: `60.5%`
+- S.TACCHINI 신발재고(주): `146.3주` (red style)
+- 경영진 핵심 메시지 문구:
+  - `두 자릿수 성장` -> `전년 동월 대비 8% 성장`
 
+## 3) Print/PDF settings (important)
+- `브랜드별 주요 KPI 비교` 섹션은 PDF에서 2페이지 시작:
+  - `src/components/BrandKpiTable.tsx`
+  - `src/app/globals.css` (`.kpi-compare-print-break`)
+- 인쇄 시 마지막 배경이 회색으로 보이지 않도록 print background 강제 white 적용:
+  - `src/app/globals.css` (`@media print` -> `html, body { background: white !important; }`)
+
+## 4) Where to start next time
+1. Pull latest and run local server.
 ```bash
+git pull
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+2. Verify key sections first:
+   - KPI table values/order
+   - 경영진 핵심 메시지
+   - Positive Signal #3 brand rate line
+3. Generate deliverables:
+```bash
+node generate-pdf.js
+node generate-html.js
+```
+4. Open generated files and check:
+   - `fnf_jan2026_report.pdf`
+   - `fnf_jan2026_report.html`
+
+## 5) Deployment notes
+- Git push to `origin/main` is used as deploy trigger workflow in practice.
+- Vercel CLI direct deploy may fail without valid token:
+  - `Error: The specified token is not valid. Use vercel login to generate a new token.`
+- If manual Vercel deploy is needed:
+```bash
+npx vercel login
+npx vercel --prod
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 6) Current workspace state to handle
+- Generated artifacts are currently untracked by git:
+  - `fnf_jan2026_report.pdf`
+  - `fnf_jan2026_report.html`
+- Decide per release whether to:
+  - keep them as artifacts only (recommended), or
+  - track them in git explicitly.

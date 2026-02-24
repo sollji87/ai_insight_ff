@@ -23,10 +23,11 @@
     size: A4;
     margin: 10mm 8mm;
   }
+  html,
   body {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
-    background: white;
+    background: white !important;
   }
   .report {
     box-shadow: none;
