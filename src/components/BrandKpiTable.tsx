@@ -28,21 +28,19 @@ export default function BrandKpiTable() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>🏔️ DISCOVERY</td>
-            <td>40,811</td>
+          <tr className="total-row">
+            <td>전사 합계</td>
+            <td>80,058</td>
             <td>
-              <span className="badge badge-green">104%</span>
+              <span className="badge badge-blue">108%</span>
             </td>
-            <td>5,209</td>
-            <td>14.0%</td>
-            <td>26.1%</td>
-            <td>23.2%</td>
-            <td>
-              <span className="badge badge-amber">44.2%</span>
-            </td>
-            <td>51.4주</td>
-            <td>59.0%</td>
+            <td>7,815</td>
+            <td>9.8%</td>
+            <td>24.6%</td>
+            <td>17.2%</td>
+            <td>45.0%</td>
+            <td>57.5주</td>
+            <td>59.7%</td>
           </tr>
           <tr>
             <td>⚾ MLB</td>
@@ -58,7 +56,7 @@ export default function BrandKpiTable() {
               <span className="badge badge-amber">49.6%</span>
             </td>
             <td>55.3주</td>
-            <td>62.3%</td>
+            <td>60.5%</td>
           </tr>
           <tr>
             <td>⚾ MLB KIDS</td>
@@ -81,6 +79,22 @@ export default function BrandKpiTable() {
               <span className="down">133.0주</span>
             </td>
             <td>54.3%</td>
+          </tr>
+          <tr>
+            <td>🏔️ DISCOVERY</td>
+            <td>40,811</td>
+            <td>
+              <span className="badge badge-green">104%</span>
+            </td>
+            <td>5,209</td>
+            <td>14.0%</td>
+            <td>26.1%</td>
+            <td>23.2%</td>
+            <td>
+              <span className="badge badge-amber">44.2%</span>
+            </td>
+            <td>51.4주</td>
+            <td>59.0%</td>
           </tr>
           <tr>
             <td>🧥 DUVETICA</td>
@@ -127,22 +141,10 @@ export default function BrandKpiTable() {
             <td>
               <span className="badge badge-red">30.4%</span>
             </td>
-            <td>—</td>
-            <td>46.2%</td>
-          </tr>
-          <tr className="total-row">
-            <td>전사 합계</td>
-            <td>80,058</td>
             <td>
-              <span className="badge badge-blue">108%</span>
+              <span className="down">146.3주</span>
             </td>
-            <td>7,815</td>
-            <td>9.8%</td>
-            <td>—</td>
-            <td>—</td>
-            <td>—</td>
-            <td>—</td>
-            <td>—</td>
+            <td>46.2%</td>
           </tr>
         </tbody>
       </table>

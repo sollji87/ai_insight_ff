@@ -121,7 +121,7 @@ export default function RiskOpportunity() {
           <h4>3. 자사몰 전 브랜드 최고 수익 채널 확인</h4>
           <ul className="card-list">
             <li>
-              DV 69.0% / MLB 62.3% / DX 59.0% / KIDS 54.3% / ST 46.2%
+              DV 69.0% / MLB 60.5% / DX 59.0% / KIDS 54.3% / ST 46.2%
             </li>
             <li>
               유통수수료 0% 구조로 수익성 압도적 우위 — 비중 확대가 전사 이익률

@@ -9,8 +9,8 @@ export default function CeoMessage() {
   return (
     <div className="ceo-msg">
       <div className="msg-title">📣 경영진 핵심 메시지</div>
-      2026년 1월, 전사 실판매출 <b>801억(YoY 108%)</b>으로 두 자릿수 성장을
-      달성하며 영업이익 <b>78억(OPM 9.8%)</b>을 기록했습니다.{" "}
+      2026년 1월, 전사 실판매출 <b>801억(YoY 108%)</b>으로 전년 동월 대비
+      8% 성장하며 영업이익 <b>78억(OPM 9.8%)</b>을 기록했습니다.{" "}
       <b>MLB·DISCOVERY·DUVETICA 3개 브랜드가 흑자를 견인</b>하며, 특히
       DUVETICA의 흑자전환(+478백만)은 할인율 21.7%p 개선이라는 구조적 성과에
       기반한 진정한 턴어라운드입니다.
