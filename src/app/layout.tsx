@@ -11,9 +11,9 @@ import "./globals.css";
  */
 
 export const metadata: Metadata = {
-  title: "F&F Corporation | 2026년 1월 전사 브랜드 경영 요약보고서",
+  title: "F&F Corporation | 전사 브랜드 경영 요약보고서",
   description:
-    "F&F 전사 브랜드(MLB, DISCOVERY, MLB KIDS, DUVETICA, S.TACCHINI) 2026년 1월 실적 CEO 보고용 경영 요약",
+    "F&F 전사 브랜드(MLB, DISCOVERY, MLB KIDS, DUVETICA, S.TACCHINI) 월간 실적 CEO 보고용 경영 요약",
 };
 
 export default function RootLayout({

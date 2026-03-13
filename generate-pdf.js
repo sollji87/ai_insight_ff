@@ -5,19 +5,21 @@
  *   1. npm run dev  (로컬 서버 먼저 실행)
  *   2. node generate-pdf.js
  *
- * 출력: fnf_jan2026_report.pdf
+ * 출력 기본값: fnf_feb2026_report.pdf
  *
  * 수정 포인트:
- *   - TARGET_URL: 로컬 서버 주소 (포트 변경 시 수정)
- *   - OUTPUT_FILE: 출력 PDF 파일명
+ *   - REPORT_PATH: 대상 경로 (기본: /feb-2026)
+ *   - REPORT_BASENAME: 출력 파일명 prefix (기본: fnf_feb2026_report)
  *   - margin: 여백 (상하좌우)
  */
 
 const puppeteer = require("puppeteer");
 const path = require("path");
 
-const TARGET_URL = "http://localhost:3000";
-const OUTPUT_FILE = path.join(__dirname, "fnf_jan2026_report.pdf");
+const REPORT_PATH = process.env.REPORT_PATH || "/feb-2026";
+const REPORT_BASENAME = process.env.REPORT_BASENAME || "fnf_feb2026_report";
+const TARGET_URL = `http://localhost:3000${REPORT_PATH}`;
+const OUTPUT_FILE = path.join(__dirname, `${REPORT_BASENAME}.pdf`);
 
 async function generatePdf() {
   console.log("🚀 PDF 생성 시작...");
