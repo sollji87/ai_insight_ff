@@ -4,7 +4,7 @@ export type ValueTone = "up" | "down" | "warn" | "neutral";
 export type BadgeTone = "green" | "red" | "amber" | "blue";
 
 export type ReportData = {
-  key: "jan-2026" | "feb-2026";
+  key: "jan-2026" | "feb-2026" | "mar-2026";
   monthLabel: string;
   title: string;
   description: string;

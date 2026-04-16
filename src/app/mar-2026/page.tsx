@@ -10,6 +10,6 @@ export const metadata: Metadata = {
   description: report.description,
 };
 
-export default function Home() {
+export default function MarchReportPage() {
   return <ReportView report={report} />;
 }

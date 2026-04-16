@@ -5,19 +5,19 @@
  *   1. npm run dev  (로컬 서버 먼저 실행)
  *   2. node generate-pdf.js
  *
- * 출력 기본값: fnf_feb2026_report.pdf
+ * 출력 기본값: fnf_mar2026_report.pdf
  *
  * 수정 포인트:
- *   - REPORT_PATH: 대상 경로 (기본: /feb-2026)
- *   - REPORT_BASENAME: 출력 파일명 prefix (기본: fnf_feb2026_report)
+ *   - REPORT_PATH: 대상 경로 (기본: /mar-2026)
+ *   - REPORT_BASENAME: 출력 파일명 prefix (기본: fnf_mar2026_report)
  *   - margin: 여백 (상하좌우)
  */
 
 const puppeteer = require("puppeteer");
 const path = require("path");
 
-const REPORT_PATH = process.env.REPORT_PATH || "/feb-2026";
-const REPORT_BASENAME = process.env.REPORT_BASENAME || "fnf_feb2026_report";
+const REPORT_PATH = process.env.REPORT_PATH || "/mar-2026";
+const REPORT_BASENAME = process.env.REPORT_BASENAME || "fnf_mar2026_report";
 const TARGET_URL = `http://localhost:3000${REPORT_PATH}`;
 const OUTPUT_FILE = path.join(__dirname, `${REPORT_BASENAME}.pdf`);
 
