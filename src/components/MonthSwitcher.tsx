@@ -1,4 +1,6 @@
-import Link from "next/link";
+"use client";
+
+import { useRouter } from "next/navigation";
 
 import { monthTabs, ReportData } from "@/lib/reportData";
 
@@ -7,25 +9,29 @@ type MonthSwitcherProps = {
 };
 
 export default function MonthSwitcher({ activeKey }: MonthSwitcherProps) {
+  const router = useRouter();
+
   return (
     <div className="month-switcher-wrap">
-      <div className="month-switcher" aria-label="월 선택">
-        {monthTabs.map((tab) => {
-          const isActive = tab.key === activeKey;
-
-          return (
-            <Link
-              key={tab.key}
-              href={tab.href}
-              className={`month-tab${isActive ? " active" : ""}`}
-              aria-current={isActive ? "page" : undefined}
-            >
-              {isActive ? <span className="tab-check">✓</span> : null}
+      <label className="month-switcher" aria-label="월 선택">
+        <span className="month-switcher-label">월 선택</span>
+        <select
+          className="month-select"
+          value={activeKey}
+          onChange={(event) => {
+            const selected = monthTabs.find((tab) => tab.key === event.target.value);
+            if (selected) {
+              router.push(selected.href);
+            }
+          }}
+        >
+          {monthTabs.map((tab) => (
+            <option key={tab.key} value={tab.key}>
               {tab.label}
-            </Link>
-          );
-        })}
-      </div>
+            </option>
+          ))}
+        </select>
+      </label>
     </div>
   );
 }
